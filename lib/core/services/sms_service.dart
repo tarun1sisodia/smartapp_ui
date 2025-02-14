@@ -20,8 +20,7 @@ class SMSService {
         _dio = Dio(BaseOptions(
           baseUrl: _twilioVerifyBaseUrl,
           headers: {
-            'Authorization': 'Basic ' +
-                base64Encode(utf8.encode('$twilioAccountSid:$twilioAuthToken')),
+            'Authorization': 'Basic ${base64Encode(utf8.encode('$twilioAccountSid:$twilioAuthToken'))}',
             'Content-Type': 'application/x-www-form-urlencoded',
           },
         ));

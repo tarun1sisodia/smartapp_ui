@@ -33,7 +33,7 @@ class AuthRepositoryImpl implements AuthRepository {
       final isDeveloperMode = await deviceService.isDeveloperModeEnabled();
 
       if (isDeveloperMode) {
-        return Left(ValidationFailure('Developer mode must be disabled'));
+        return const Left(ValidationFailure('Developer mode must be disabled'));
       }
 
       final requestData = {

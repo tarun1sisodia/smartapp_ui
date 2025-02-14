@@ -39,9 +39,9 @@ Future<void> init() async {
     final dio = Dio(
       BaseOptions(
         baseUrl: AppConfig.baseUrl,
-        connectTimeout: Duration(seconds: AppConfig.connectionTimeout),
-        receiveTimeout: Duration(seconds: AppConfig.receiveTimeout),
-        sendTimeout: Duration(seconds: AppConfig.sendTimeout),
+        connectTimeout: const Duration(seconds: AppConfig.connectionTimeout),
+        receiveTimeout: const Duration(seconds: AppConfig.receiveTimeout),
+        sendTimeout: const Duration(seconds: AppConfig.sendTimeout),
         validateStatus: (status) {
           return status != null && status >= 200 && status < 500;
         },
